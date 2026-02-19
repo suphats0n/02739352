@@ -1,0 +1,37 @@
+//ใช้คำสั่งนี้เพื่อเช็คเวอร์ชั่น
+docker -v 
+//คำสั่งนี้เพื่อดึงภาพของ Hello World จาก Docker Hub และรันคอนเทนเนอร์ที่แสดงข้อความต้อนรับ
+docker run hello-world
+//คำสั่งนี้เพื่อตรวจสองสถานะของคอนเทนนเนอร์ทั้งหมดที่กำลังทำงานอยูในระบบของคุณ
+docker ps --all
+//คำสั่งนี้เพื่อแสดงรายการของภาพ Docker ทั้งหมดที่มีอยู่ในระบบของคุณ
+/
+docker imges
+docker run bus
+docke stop //คอนเทนเนอร์ไอดี
+cocker pull <imges>
+docker create busybox ping google.com
+docker system prune 
+docker  run nginx
+docker exec -it <คอนเทนเนอร์ไอดี> sh
+docker exec -it <คอนเทนเนอร์ไอดี> bash
+codker exit
+cd /usr/share/nginx/html
+//คำสั่งนี้เพื่อสร้างไฟล์ index.html ในคอนเทนเนอร์ของ nginx
+cat index.html
+//คำสั่งนี้เพื่อรันคอนเทนเนอร์ของ nginx ในโหมด detached และเชื่อมต่อพอร์ต 9000 ของเครื่องโฮสต์กับพอร์ต 80 ของคอนเทนเนอร์
+docker run -d -p 9000 nginx
+docker image inspect nginx
+docker pull wordpress //คำสั่งนี้เพื่อรันคอนเทนเนอร์ของ WordPress ในโหมด detached และเชื่อมต่อพอร์ต 8080 ของเครื่องโฮสต์กับพอร์ต 80 ของคอนเทนเนอร์
+docker pull mysql:5.7 //คำสั่งนี้เพื่อรันคอนเทนเนอร์ของ MySQL ในโหมด detached และเชื่อมต่อพอร์ต 3306 ของเครื่องโฮสต์กับพอร์ต 3306 ของคอนเทนเนอร์
+docker pull phpmyadmin/phpmyadmin //คำสั่งนี้เพื่อรันคอนเทนเนอร์ของ phpMyAdmin ในโหมด detached และเชื่อมต่อพอร์ต 8081 ของเครื่องโฮสต์กับพอร์ต 80 ของคอนเทนเนอร์
+docker network create wordpess //คำสั่งนี้เพื่อสร้างเครือข่าย Docker ที่ชื่อว่า "wordpress"
+docker network ls //คำสั่งนี้เพื่อแสดงรายการเครือข่าย Docker ทั้งหมดที่มีอยู่ในระบบของคุณ
+docker run -d --name mysql --network wordpress -e MYSQL_ROOT_PASSWORD=yourpassword mysql:5.7 //คำสั่งนี้เพื่อรันคอนเทนเนอร์ของ MySQL ในโหมด detached และเชื่อมต่อพอร์ต 3306 ของเครื่องโฮสต์กับพอร์ต 3306 ของคอนเทนเนอร์
+docker run -d --name wordpress --network wordpress -p 8080:80 -e WORDPRESS_DB_HOST=mysql:3306 -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=yourpassword wordpress //คำสั่งนี้เพื่อรันคอนเทนเนอร์ของ WordPress ในโหมด detached และเชื่อมต่อพอร์ต 8080 ของเครื่องโฮสต์กับพอร์ต 80 ของคอนเทนเนอร์
+docker run -d --name phpmyadmin --network wordpress -p 8081:80 -e PMA_HOST=mysql:3306 phpmyadmin/phpmyadmin //คำสั่งนี้เพื่อรันคอนเทนเนอร์ของ phpMyAdmin ในโหมด detached และเชื่อมต่อพอร์ต 8081 ของเครื่องโฮสต์กับพอร์ต 80 ของคอนเทนเนอร์
+
+
+
+
+
