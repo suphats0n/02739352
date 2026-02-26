@@ -1,6 +1,9 @@
+#MySQL data
 database/
 mysql/
-
+#socket files
 *.sock
+#logs
 *.log
+#docker volumes
 */data/
