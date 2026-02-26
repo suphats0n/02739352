@@ -1,0 +1,6 @@
+database/
+mysql/
+
+*.sock
+*.log
+*/data/
