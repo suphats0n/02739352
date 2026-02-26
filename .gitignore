@@ -1,9 +1,8 @@
-#MySQL data
-database/
-mysql/
-#socket files
+database/*
+mysql/*
+!database/.gitkeep
+!mysql/.gitkeep
+
 *.sock
-#logs
 *.log
-#docker volumes
 */data/
